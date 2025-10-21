@@ -1,0 +1,6 @@
+username,email,role,initial_password
+john_sales,john.smith@company.com,user,TempPass123!
+jane_manager,jane.doe@company.com,manager,TempPass456!
+bob_analyst,bob.jones@company.com,user,TempPass789!
+alice_support,alice.wilson@company.com,user,TempPass012!
+david_exec,david.brown@company.com,admin,TempPass345!

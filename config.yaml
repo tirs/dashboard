@@ -1,0 +1,26 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@dashboard.com
+      name: Admin User
+      password: $2b$12$N9qo8uLOickgx2ZMRZoXyeIGlmVeIHqnZQjZZwL2.kJLhX8eRJIR2
+      role: admin
+    manager:
+      email: manager@dashboard.com
+      name: Manager User
+      password: $2b$12$N9qo8uLOickgx2ZMRZoXyeIGlmVeIHqnZQjZZwL2.kJLhX8eRJIR2
+      role: manager
+    user:
+      email: user@dashboard.com
+      name: Regular User
+      password: $2b$12$N9qo8uLOickgx2ZMRZoXyeIGlmVeIHqnZQjZZwL2.kJLhX8eRJIR2
+      role: user
+
+cookie:
+  expiry_days: 30
+  key: dashboard_secret_key_2024
+  name: dashboard_auth
+
+preauthorized:
+  emails:
+    - admin@dashboard.com
