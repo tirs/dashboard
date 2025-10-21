@@ -201,7 +201,7 @@ def render_home():
     # Hero Section
     st.markdown("""
     <div class="hero-section">
-        <div class="hero-title">📊 Welcome to Analytics Dashboard</div>
+        <div class="hero-title">Welcome to Analytics Dashboard</div>
         <div class="hero-subtitle">Your personal data intelligence platform</div>
     </div>
     """, unsafe_allow_html=True)
@@ -217,7 +217,7 @@ def render_home():
     
     st.markdown(f"""
     <div class="welcome-message">
-        {greeting}, <span style="color: #58A6FF;">{username}</span> 👋
+        {greeting}, <span style="color: #58A6FF;">{username}</span>
     </div>
     """, unsafe_allow_html=True)
     
@@ -225,7 +225,7 @@ def render_home():
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.markdown("""<div class="section-header">📋 Your Profile</div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="section-header">Your Profile</div>""", unsafe_allow_html=True)
         
         st.markdown(f"""
         <div class="user-info-card">
@@ -241,7 +241,7 @@ def render_home():
         """, unsafe_allow_html=True)
     
     with col2:
-        st.markdown("""<div class="section-header">📈 Quick Statistics</div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="section-header">Quick Statistics</div>""", unsafe_allow_html=True)
         
         stat_col1, stat_col2, stat_col3 = st.columns(3)
         
@@ -270,7 +270,7 @@ def render_home():
             """, unsafe_allow_html=True)
     
     # Quick Access Section
-    st.markdown("""<div class="section-header">🚀 Quick Access</div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="section-header">Quick Access</div>""", unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -282,35 +282,34 @@ def render_home():
     ]
     
     with col1:
-        if st.button("📊 Analytics", key="quick_analytics", use_container_width=True):
+        if st.button("Analytics", key="quick_analytics", use_container_width=True):
             st.session_state.active_page = "Analytics"
             st.rerun()
     
     with col2:
-        if st.button("🔍 Data Browser", key="quick_data", use_container_width=True):
+        if st.button("Data Browser", key="quick_data", use_container_width=True):
             st.session_state.active_page = "Data Browser"
             st.rerun()
     
     with col3:
-        if st.button("📈 Reports", key="quick_reports", use_container_width=True):
+        if st.button("Reports", key="quick_reports", use_container_width=True):
             st.session_state.active_page = "Reports"
             st.rerun()
     
     with col4:
-        if st.button("⚙️ Settings", key="quick_settings", use_container_width=True):
+        if st.button("Settings", key="quick_settings", use_container_width=True):
             st.session_state.active_page = "Settings"
             st.rerun()
     
     # Features Section
     st.markdown("<div style='margin: 2rem 0;'></div>", unsafe_allow_html=True)
-    st.markdown("""<div class="section-header">✨ Key Features</div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="section-header">Key Features</div>""", unsafe_allow_html=True)
     
     feature_col1, feature_col2 = st.columns(2)
     
     with feature_col1:
         st.markdown("""
         <div class="feature-card">
-            <div class="feature-icon">📊</div>
             <div class="feature-title">Advanced Analytics</div>
             <div class="feature-desc">
                 Powerful analytics tools to track, visualize, and understand your data with interactive charts and real-time metrics.
@@ -320,7 +319,6 @@ def render_home():
         
         st.markdown("""
         <div class="feature-card">
-            <div class="feature-icon">🔒</div>
             <div class="feature-title">Secure Access</div>
             <div class="feature-desc">
                 Enterprise-grade security with role-based access control and row-level security for your sensitive data.
@@ -331,7 +329,6 @@ def render_home():
     with feature_col2:
         st.markdown("""
         <div class="feature-card">
-            <div class="feature-icon">📈</div>
             <div class="feature-title">Real-time Reports</div>
             <div class="feature-desc">
                 Generate comprehensive reports with custom filters, date ranges, and data export capabilities.
@@ -341,7 +338,6 @@ def render_home():
         
         st.markdown("""
         <div class="feature-card">
-            <div class="feature-icon">👥</div>
             <div class="feature-title">Team Collaboration</div>
             <div class="feature-desc">
                 Manage multiple users, assign roles, track activities, and maintain a complete audit trail of all changes.
@@ -351,10 +347,10 @@ def render_home():
     
     # Getting Started Section
     st.markdown("<div style='margin: 2rem 0;'></div>", unsafe_allow_html=True)
-    st.markdown("""<div class="section-header">🎯 Getting Started</div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="section-header">Getting Started</div>""", unsafe_allow_html=True)
     
     st.info("""
-    **👉 What's Next?**
+    **What's Next?**
     
     1. **Explore Analytics** - Visit the Analytics page to view KPIs, charts, and trends
     2. **Browse Data** - Use the Data Browser to explore sales and product data
@@ -366,7 +362,7 @@ def render_home():
     # Recent Activity Section (if user is admin or manager)
     if user_role in ["Admin", "Manager"]:
         st.markdown("<div style='margin: 2rem 0;'></div>", unsafe_allow_html=True)
-        st.markdown("""<div class="section-header">📋 Recent Activity</div>""", unsafe_allow_html=True)
+        st.markdown("""<div class="section-header">Recent Activity</div>""", unsafe_allow_html=True)
         
         try:
             recent_activity = db.execute("""
