@@ -257,38 +257,6 @@ def render_register():
     col1, col2, col3 = st.columns([1, 1.2, 1])
     
     with col2:
-        # Visual element
-        st.markdown("""
-        <div style="text-align: center; margin-bottom: 2rem;">
-            <div style="font-size: 4rem; margin-bottom: 0.5rem; opacity: 0.8;">🚀</div>
-            <div style="height: 3px; width: 40px; background: linear-gradient(90deg, #1F77B4, #58A6FF); margin: 0 auto; border-radius: 2px;"></div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Register form box
-        st.markdown("""
-        <div class="register-form-box">
-            <div class="register-title">Get Started</div>
-            <div class="register-subtitle">Create your account today</div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Social auth buttons
-        st.markdown("""
-        <div class="social-auth-buttons">
-            <button class="social-button" title="Sign up with Google">Google</button>
-            <button class="social-button" title="Sign up with Microsoft">Microsoft</button>
-            <button class="social-button" title="Sign up with Apple">Apple</button>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Divider
-        st.markdown("""
-        <div class="form-divider">
-            <span>or</span>
-        </div>
-        """, unsafe_allow_html=True)
-        
         # Register form
         with st.form("register_form", clear_on_submit=True):
             username = st.text_input(
